@@ -27,7 +27,9 @@ const obtenerAclamadas = async () => {
                         <img src="https://image.tmdb.org/t/p/w500${pelis[i].poster_path}" width="250" alt="" class="movie-item-img">
                         <div class="movie-item-detail">
                             <p class="movie-item-detail-title">${pelis[i].title}</p>
+                            <p class="movie-item-detail-overview">${pelis[i].overview}</p>
                             <p class="movie-item-detail-subtitle">${pelis[i].vote_average}</p>
+                            <p class="movie-item-detail-release_date">${pelis[i].release_date}</p>
                         </div>
                     </a>
                 </div>

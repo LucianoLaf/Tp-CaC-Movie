@@ -68,9 +68,9 @@
 
     </header>
     <!-- Mi parte principal -->
-    <main>
+    <main class="main-flex">
         <!-- banner para publicidad o mostrar un buen poster y alguna info -->
-        <section id="banner">
+        <section id="banner"class="main" >
             <div class="banner-container">
 
                 <h1>Películas y series ilimitadas y mucho más.</h1>
@@ -78,13 +78,14 @@
             </div>
         </section>
         <!-- busqueda de pelis en la plataforma -->
-        <section id="search" class="search-container">
+        <section id="search" class="search-container"class="main" >
                 <!-- agrego un span que es en linea para poder aplicar estilos -->
                 <h2> <i class="fa-solid fa-magnifying-glass fa-fade"></i><span>¿Qué estas buscando?</span></h2>
                 <input type="text" placeholder="Ingrese nombre de peli a buscar ..." >           
         </section>
+        
         <!-- las tendencias -->
-        <section id="trending">
+        <section id="trending" class="main">
             <h1 class="primer-clase">Las tendencias de hoy </h1>
             <!-- NEW agregamos id="trending-list" -->
             <div id="trending-list" class="grid-pelis">
@@ -94,11 +95,16 @@
 
         </section>
         <!-- pelis destacadas -->
-        <section id="top-rated">
+        <section id="top-rated" >
             <h1 id="aclamadas">Las mas aclamadas</h1>
             <div id="aclamadas-lista" class="grid-pelis"></div>
         </section>
-        
+        <section id="top-rated" >
+            <h1 class="estrenos">Proximos estrenos</h1>
+            <div id="estrenos-lista" class="grid-pelis-estrenos"> 
+                
+            </div>
+        </section>
         
     
     </main>
@@ -118,5 +124,6 @@
     <script src="./static/js/generales.js"></script>
     <script src="./static/js/listado.js"></script>
     <script src="./static/js/aclamadas.js"></script>
+    <script src="./static/js/estrenos.js"></script>
 </body>
 </html>

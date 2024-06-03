@@ -5,7 +5,7 @@
     --primary-color:#9f3647;
     --secondary-color:#ffc098;
     --third-color:#131111cc;
-    --color: #fff;
+    --color: #ffffff;
 }
 * {
     margin: 0;
@@ -18,14 +18,18 @@ body {
     color: var(--color);
     font-size: 24px;
     font-family: 'Nunito', Georgia;
+    
+
 }
 
 a {
     text-decoration: none;
     color: var(--color);
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
-
+a:hover {
+    color:var(--secondary-color);
+}
   
 header { /*este es el selector del header que va a modificarse con js, en generales.js*/
     position: fixed;
@@ -186,21 +190,38 @@ nav ul {
     padding-left: 10px;
     margin-top: 10px;
 }
-h1 {
-    text-align: center;
+/* viñetas */
+#aclamadas,h1.primer-clase{
+    display: flex;
+  align-items: center;
+  margin: 30px;
 }
+/* viñetas */
+#aclamadas::before,h1.primer-clase::before { 
+    content: '';
+    display: inline-block;
+    width: 15px; 
+    height: 30px; 
+    background-color:#9f3647;
+    margin-right: 10px;
+    
+  }
+
+
 
 
 .grid-pelis {
     /* border: 4px solid red; */
     display: grid;
-    grid-template-columns: repeat(4, 1fr) ;
-
+    grid-template-columns: repeat(5, 0.1fr) ;
+    gap: 50px;
+    
+    padding: 20px
 }
 
 /* Trabajando con Flex */
 .movie-item{
-    border: 4px solid yellowgreen;
+    border: 4px solid rgba(19, 18, 18, 0.938);
     display: flex;
     overflow: hidden;
     position: relative;
@@ -216,11 +237,11 @@ h1 {
 }
 
 .movie-item-detail {
-    background-color: #db4648;
+    background-color: #1a1919dc;
     position: absolute;
     bottom: -100%;
     width: 100%;
-    max-height: 85%;
+    max-height: 100%;
     transition: bottom 0.5s ease-in-out;
 }
 
@@ -234,17 +255,118 @@ h1 {
 
 .movie-item-detail-title {
     color: white;
-    margin: 5px 0px 0px 0px;
-    line-height: 1.2em;
+    margin: 0px 0px 0px 20px;
+    /* line-height: 2rem; */
 }
-  
+.movie-item-detail-overview{
+    color: #FFF;
+    font-size:x-small;
+    margin: 0px 0px 5px;
+
+}
+.movie-item-detail-release_date{
+    color: #FFF;
+    font-size:x-small;
+    margin: 0px 0px 5px;
+
+}
 .movie-item-detail-subtitle {
     color: white;
-    font-size: 8px;
+    font-size: 10px;
     margin: 3px 0px;
 }
 
 .movie-item-detail-subtitle::after{
+    content: '🌟';
+}
+/* Estilos para estrenos */
+/* viñetas */
+.estrenos{
+    display: flex;
+  align-items: center;
+  margin: 30px;
+}
+/* viñetas */
+.estrenos::before { 
+    content: '';
+    display: inline-block;
+    width: 15px; 
+    height: 30px; 
+    background-color:#9f3647;
+    margin-right: 10px;
+    
+  }
+
+
+
+
+.grid-pelis-estrenos {
+    display: flex;
+    overflow-x: auto;
+    gap: 2px;
+    padding: 20px; 
+    width: 100%
+
+}
+/* Trabajando con Flex */
+.movie-item-estrenos{
+    border: 4px solid rgba(19, 18, 18, 0.938);
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.movie-item-img-estrenos {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;/* Ajusta la imagen para cubrir el contenedor sin distorsión */
+}
+
+.movie-item-detail-estrenos {
+    background-color: #1a1919dc;
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    max-height: 100%;
+    transition: bottom 0.5s ease-in-out;
+}
+
+.movie-item-estrenos:hover{
+    opacity: 0.6;
+}
+
+.movie-item-estrenos:hover .movie-item-detail-estrenos {
+    bottom: 0;
+}
+
+.movie-item-detail-title-estrenos {
+    color: white;
+    margin: 0px 0px 0px 20px;
+    /* line-height: 2rem; */
+    font-size: x-small;
+}
+.movie-item-detail-overview-estrenos{
+    color: #FFF;
+    font-size:0%;
+    margin: 0px 0px 5px;
+
+}
+.movie-item-detail-release_date-estrenos{
+    color: #FFF;
+    font-size:xx-small;
+    margin: 0px 0px 5px;
+
+}
+.movie-item-detail-subtitle-estrenos {
+    color: white;
+    font-size:xx-small;
+    margin: 3px 0px;
+}
+
+.movie-item-detail-subtitle-estrenos::after{
     content: '🌟';
 }
 
@@ -267,6 +389,27 @@ footer a:hover {
     text-decoration: underline;
     color:var(--secondary-color);
 }
+
+footer {
+    align-items: center;
+    background-color: var(--third-color);
+    display: flex;
+    height: 100px;
+    width: 100%;
+}
+footer a {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color:var(--secondary-color);
+}
+
 
 
 /* TABLETS */
