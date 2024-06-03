@@ -301,10 +301,8 @@ nav ul {
 
 
 .grid-pelis-estrenos {
-    display: flex;
-    overflow-x: auto;
-    gap: 2px;
-    padding: 20px; 
+    display:flex;
+    padding: 10px; 
     width: 100%
 
 }
